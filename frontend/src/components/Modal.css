@@ -1,0 +1,90 @@
+/* Modal.css */
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.modal-content {
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	width: 90%;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+    color: black
+}
+
+.modal-close-btn {
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: #aaa;
+}
+
+.modal-close-btn:hover {
+	color: #666;
+}
+
+.modal-body {
+	padding-bottom: 15px;
+}
+
+.input-stack {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.modal-input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.modal-footer {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #eee;
+}
+
+.modal-update-btn {
+	padding: 10px 15px;
+	border: none;
+	border-radius: 4px;
+	background-color: #007bff;
+	color: white;
+	cursor: pointer;
+}
+
+.modal-cancel-btn {
+	padding: 10px 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #333;
+	cursor: pointer;
+}
