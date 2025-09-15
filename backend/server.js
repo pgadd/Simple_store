@@ -13,9 +13,18 @@ const port = process.env.PORT || 3000
 
 const __dirname = path.resolve();
 
-app.use(cors({
-    origin: 'http://localhost:5173'
-}));
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      const allowedOrigins = ['http://localhost:5173', 'https://simple-store-59y4.onrender.com', "http://localhost:3000"];
+      if (allowedOrigins.includes(origin) || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+  })
+);
 
 app.use(express.json()); // allows us to accpet json data in re.body
 
